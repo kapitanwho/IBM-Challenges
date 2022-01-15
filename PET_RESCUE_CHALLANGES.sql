@@ -1,0 +1,58 @@
+--SELECT * FROM PETRESCUE;
+
+-- QA1:
+-- SELECT SUM(cost) FROM PETRESCUE;
+
+-- QA2:
+-- SELECT SUM(cost) AS SUM_OF_COST FROM PETRESCUE;
+
+-- QA3: 
+--SELECT MAX(quantity) FROM PETRESCUE;
+
+--Alternative solving:
+--SELECT animal, SUM(quantity) AS quantity FROM PETRESCUE
+--GROUP BY animal
+--ORDER BY quantity DESC
+--LIMIT 1;
+
+-- QA4:
+--SELECT AVG(cost) FROM PETRESCUE;
+
+-- QA5:
+--SELECT AVG(COST/QUANTITY) FROM PETRESCUE 
+--WHERE ANIMAL = 'Dog';
+
+
+-- QB1:
+--SELECT animal,ROUND(cost) FROM PETRESCUE;
+
+-- QB2:
+--SELECT LENGTH(animal) FROM PETRESCUE;
+
+-- QB3:
+--SELECT UPPER(animal) FROM PETRESCUE
+
+-- QB4:
+--SELECT DISTINCT(UPPER(animal)) FROM PETRESCUE;
+
+-- QB5:
+--SELECT * FROM PETRESCUE
+--WHERE LOWER(animal) = 'cat';
+
+-- QC1:
+--SELECT DAY(rescuedate) FROM PETRESCUE 
+--WHERE ANIMAL = 'Cat';
+
+-- QC2:
+--SELECT SUM(quantity) FROM PETRESCUE 
+--WHERE MONTH(RESCUEDATE) = '05';
+
+-- QC3:
+--SELECT SUM(quantity) FROM PETRESCUE
+--WHERE DAY(rescuedate) = '14';
+
+-- QC4:
+--SELECT(rescuedate + 3 DAYS) FROM PETRESCUE
+
+-- QC5:
+--SELECT(CURRENT DATE - rescuedate) FROM PETRESCUE
